@@ -219,7 +219,7 @@ open class DefaultNotificationsSettingsCallbacks(
   }
 
   override fun setMessageNotificationVibration(enabled: Boolean) {
-    viewModel.setMessageNotificationsEnabled(enabled)
+    viewModel.setMessageNotificationVibration(enabled)
   }
 
   override fun setMessasgeNotificationLedColor(selection: String) {
@@ -441,7 +441,7 @@ fun NotificationsSettingsScreen(
             text = stringResource(R.string.preferences__vibrate),
             checked = state.messageNotificationsState.vibrateEnabled,
             enabled = state.messageNotificationsState.notificationsEnabled,
-            onCheckChanged = callbacks::setMessageNotificationsEnabled
+            onCheckChanged = callbacks::setMessageNotificationVibration
           )
         }
 
